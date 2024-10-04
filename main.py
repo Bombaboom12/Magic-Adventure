@@ -1,27 +1,31 @@
-import pygame
-from os.path import join
+from settings import *
+from player import Player
 
 pygame.init()
 
-# General setup
-LARGHEZZA, ALTEZZA = 1280, 720
-screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
-pygame.display.set_caption("Magic Adventure")
-clock = pygame.time.Clock()
+class Game:
+    def __init__(self):
+        self.screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
+        pygame.display.set_caption("Magic Adventure")
+        self.clock = pygame.time.Clock()
+        self.running = True
 
-running = True
-while running:
+    def run(self):
+        while self.running:
+            deltaTime = self.clock.tick() / 1000
     
-    deltaTime = clock.tick() / 1000
-    
-    # Event loop
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+            # Event loop
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
 
-    # Draw the game
-    screen.fill("Blue")
+            # Draw the game
+            self.screen.fill("Blue")
 
-    pygame.display.update()
+            pygame.display.update()
 
-pygame.quit()
+        pygame.quit()
+
+if __name__ == "__main__":
+    game = Game()
+    game.run()

@@ -1,34 +1,39 @@
 import pygame
+from settings import *
 import pytmx
 from pytmx.util_pygame import load_pygame
+from player import Player
 from os.path import join
+
+class Game:
+    def __init__(self):
 
 pygame.init()
 
-# General setup
-LARGHEZZA, ALTEZZA = 1024, 768
-tmxdata = pytmx.TiledMap(".tiled\hub.tmx")
-tiled_map = load_pygame('.tiled\hub.tmx')
-screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
-pygame.display.set_caption("Magic Adventure")
-clock = pygame.time.Clock()
+class Game:
+    def __init__(self):
+        self.screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
+        pygame.display.set_caption("Magic Adventure")
+        self.clock = pygame.time.Clock()
+        self.running = True
 
-while True:
+    def run(self):
+        while self.running:
+            deltaTime = self.clock.tick() / 1000
     
-    deltaTime = clock.tick() / 1000
-    
-    # Event loop
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            quit()
+            # Event loop
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
 
-    for layer in tiled_map.visible_layers:
-        for x, y, gid, in layer:
-            tile = tiled_map.get_tile_image_by_gid(gid)
-            if(tile != None):
-                screen.blit(tile, (x * tiled_map.tilewidth, y * tiled_map.tileheight))
+            # Draw the game
+            self.screen.fill("Blue")
+
+            pygame.display.update()
+
         
-    pygame.display.update()
-
-
 pygame.quit()
+
+if __name__ == "__main__":
+    game = Game()
+    game.run()

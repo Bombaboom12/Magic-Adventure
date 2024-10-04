@@ -7,8 +7,6 @@ pygame.init()
 LARGHEZZA, ALTEZZA = 1280, 720
 screen = pygame.display.set_mode((LARGHEZZA, ALTEZZA))
 pygame.display.set_caption("Magic Adventure")
-#icona = pygame.image.load(join())
-#pygame.display.set_icon(icona)
 clock = pygame.time.Clock()
 
 running = True

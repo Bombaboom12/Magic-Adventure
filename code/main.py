@@ -1,12 +1,11 @@
 import pygame
 from settings import *
-import pytmx
 from pytmx.util_pygame import load_pygame
 from player import Player
+from groups import *
+from settore import *
 
 pygame.init()
-
-
 
 class Game:
 
@@ -15,6 +14,18 @@ class Game:
         pygame.display.set_caption("Magic Adventure")
         self.clock = pygame.time.Clock()
         self.running = True
+
+        self.all_sprites = AllSprites()
+        
+        self.setup()
+
+        self.player = Player((400, 680), self.all_sprites)
+        
+    def setup(self):
+        map1 = load_pygame(join(".tiled", "Hub.tmx"))
+        
+        for x, y, image in map1.get_layer_by_name("Livello tile 1").tiles():
+            Settore((x * TILE_SIZE, y * TILE_SIZE), image, self.all_sprites)
 
     def run(self):
         while self.running:
@@ -26,12 +37,13 @@ class Game:
                     self.running = False
 
             # Draw the game
-            self.screen.fill("Blue")
-
+            self.all_sprites.update(deltaTime)
+            # Draw
+            self.screen.fill("Gray")
+            self.all_sprites.draw(self.player.rect.center)
             pygame.display.update()
 
-        
-pygame.quit()
+        pygame.quit()
 
 if __name__ == "__main__":
     game = Game()

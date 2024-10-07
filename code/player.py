@@ -11,11 +11,6 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.Vector2()
         self.speed = 500
 
-        # Jumping
-        self.y_gravity = 1
-        self.jump_height = 20
-        self.y_velocity = self.jump_height
-
     def input(self):
         keys = pygame.key.get_pressed()
         self.direction.x = int(keys[pygame.K_d]) - int(keys[pygame.K_a])

@@ -3,9 +3,6 @@
  <tileset firstgid="1" source="Dungeon.tsx"/>
  <tileset firstgid="885" source="village_tiles.tsx"/>
  <tileset firstgid="1510" source="village_buildings.tsx"/>
- <imagelayer id="2" name="Background" offsetx="100" offsety="185" parallaxy="0.5" repeatx="1">
-  <image source="Tile png/Legacy-Fantasy - High Forest 2.3/Background/Background.png" width="480" height="272"/>
- </imagelayer>
  <layer id="3" name="Layer 3" width="64" height="48">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

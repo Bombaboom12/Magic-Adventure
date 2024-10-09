@@ -24,8 +24,9 @@ class Game:
     def setup(self):
         map1 = load_pygame(join(".tiled", "Hub.tmx"))
         
-        for x, y, image in map1.get_layer_by_name("Livello tile 1").tiles():
-            Settore((x * TILE_SIZE, y * TILE_SIZE), image, self.all_sprites)
+        for layer in map1.visible_layers:
+            for x, y, image in map1.get_layer_by_name("Layer 1").tiles():
+                Settore((x * TILE_SIZE, y * TILE_SIZE), image, self.all_sprites)
 
     def run(self):
         while self.running:

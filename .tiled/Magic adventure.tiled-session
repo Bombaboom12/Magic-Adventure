@@ -1,0 +1,65 @@
+{
+    "activeFile": "Hub.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "file.lastUsedOpenFilter": "Tutti i file (*)",
+    "fileStates": {
+        "Dungeon.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Hub.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 169.3333333333333,
+                "y": 648.6666666666666
+            }
+        },
+        "Hub2.tmx": {
+            "scale": 0.7619791666666667,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 511.82501708817506,
+                "y": 383.2125768967874
+            }
+        },
+        "background.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "village_buildings.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "village_tiles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "C:/Users/Bomba/Desktop/corso gaming/Magic adventure/.tiled/Tile png/Legacy-Fantasy - High Forest 2.3/Background",
+    "openFiles": [
+        "Hub.tmx",
+        "Dungeon.tsx",
+        "Hub2.tmx",
+        "village_tiles.tsx",
+        "village_buildings.tsx",
+        "background.tsx"
+    ],
+    "project": "Magic adventure.tiled-project",
+    "property.type": "file",
+    "recentFiles": [
+        "background.tsx",
+        "village_buildings.tsx",
+        "village_tiles.tsx",
+        "Hub2.tmx",
+        "Dungeon.tsx",
+        "Hub.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="64" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="64" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" source="Dungeon.tsx"/>
  <tileset firstgid="885" source="village_tiles.tsx"/>
  <tileset firstgid="1510" source="village_buildings.tsx"/>
+ <imagelayer id="5" name="Background" parallaxy="0.23" repeatx="1">
+  <image source="Tile png/Legacy-Fantasy - High Forest 2.3/Background/Background.png" width="480" height="272"/>
+ </imagelayer>
  <layer id="3" name="Layer 3" width="64" height="48">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
